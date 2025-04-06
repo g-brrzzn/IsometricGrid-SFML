@@ -45,7 +45,7 @@ int main() {
         updateCamera(view, dt);
 
         window.setView(view);
-        window.clear(sf::Color::White);
+        window.clear(sf::Color{ 20, 20, 60 });
         
         renderGrid(window, view, grid);
 
