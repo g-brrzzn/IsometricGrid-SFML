@@ -4,8 +4,10 @@
 #include <vector>
 #include "Cell.h"
 #include "TextureManager.h"
+#include <SFML/Graphics.hpp>
 
-std::vector<std::vector<cell>> generateGrid(const TextureData& textureData);
-void renderGrid(sf::RenderWindow& window, const sf::View& view, const std::vector<std::vector<cell>>& grid);
+std::vector<std::vector<std::vector<cell>>> generateGrid3D(const TextureData& textureData);
+void renderGrid3D(sf::RenderWindow& window, const sf::View& view,
+    const std::vector<std::vector<std::vector<cell>>>& grid);
 
 #endif

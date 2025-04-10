@@ -107,14 +107,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>"D:\libs\SFML-3.0.0\include";%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"C:\libs\SFML-3.0.0\include";%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>"D:\libs\SFML-3.0.0\lib";%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>"C:\libs\SFML-3.0.0\lib";%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;opengl32.lib;gdi32.lib;winmm.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -149,12 +149,19 @@
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="PerlinNoise.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="dirt1.png" />
+    <Image Include="dirt2.png" />
+    <Image Include="dirt3.png" />
     <Image Include="tile1.png" />
     <Image Include="tile2.png" />
     <Image Include="tile3.png" />
+    <Image Include="water1.png" />
+    <Image Include="water2.png" />
+    <Image Include="water3.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

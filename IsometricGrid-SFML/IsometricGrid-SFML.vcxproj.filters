@@ -41,6 +41,9 @@
     <ClInclude Include="TextureManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="tile1.png">
@@ -50,6 +53,24 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="tile3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="water1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="water2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="water3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="dirt1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="dirt2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="dirt3.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
