@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+# Other
+*.pdb
+*.db-shm
+*.db
+*db-wal
+*.opendb
+*.tlog
+*.vsidx
+*.ipch
+*.recipe
+*.ilk
+*.log
+*.idb
+*.suo
+.vs/IsometricGrid-SFML/v17/DocumentLayout.backup.json
+.vs/IsometricGrid-SFML/v17/DocumentLayout.json
