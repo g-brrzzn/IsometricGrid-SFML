@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Constants.h"
 #include "TextureManager.h"
-#include "Grid.h"
+#include "InfiniteGrid.h"
 
 void updateCamera(sf::View& view, float dt) {
     const float cameraSpeed = 1000.f;
@@ -18,11 +18,13 @@ void updateCamera(sf::View& view, float dt) {
 
 int main() {
     sf::RenderWindow window(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), GAME_TITLE);
-    //window.setFramerateLimit(60);
+    window.setVerticalSyncEnabled(true);
 
-    TextureData texturedata = loadTextures();
-    auto grid = generateGrid3D(texturedata);
-    sf::View view(sf::FloatRect({ WORLD_WIDTH/4, WORLD_HEIGHT/4 }, { float(WINDOW_WIDTH), float(WINDOW_HEIGHT) }));
+    TextureData tex = loadTextures();
+    InfiniteGrid world(tex);
+    sf::View view{ {0,0},
+                {static_cast<float>(WINDOW_WIDTH),
+                 static_cast<float>(WINDOW_HEIGHT)} };
 
     float fps = 0.0f;
     sf::Clock clock;
@@ -41,16 +43,15 @@ int main() {
 
             if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
                 if (keyPressed->scancode == sf::Keyboard::Scancode::R)
-                    grid = generateGrid3D(texturedata);
+                    world.regenerate();
             }
         }
 
         updateCamera(view, dt);
-
         window.setView(view);
-        window.clear(sf::Color{ 20, 20, 60 });
+        window.clear({ 20,20,60 });
 
-        renderGrid3D(window, view, grid);
+        world.render(window, view);
 
         window.display();
     }

@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
-    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="InfiniteGrid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
@@ -149,6 +149,7 @@
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="InfiniteGrid.h" />
     <ClInclude Include="PerlinNoise.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
