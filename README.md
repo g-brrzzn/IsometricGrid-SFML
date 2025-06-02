@@ -1,18 +1,16 @@
 # 🗺️ IsometricGrid-SFML
 
-A C++ 2D isometric grid application using SFML that features a dynamic camera system to navigate through an isometric map, showcasing an integration of grid layout, map structure, camera movement, and rendering culling. This technical demo builds upon previous work by exploring these features in an isometric perspective, offering a robust foundation for further experimentation.
+A C++ 2D isometric grid application using SFML that features a dynamic camera system to navigate through an isometric map, showcasing an integration of grid layout, infinite world generation, chunk system, camera movement, and rendering culling. This technical demo builds upon previous work by exploring these features in an isometric perspective, offering a robust foundation for further experimentation.
 
 ## 🎥 Demonstration  
-Example image showcasing an isometric layout with randomly generated tiles and dynamic camera control.  
-![isometric2](https://github.com/user-attachments/assets/872275c6-f3eb-4d86-afb9-6e4f4089b7fc)
-![isometric1](https://github.com/user-attachments/assets/522c33e8-7ae0-4555-a152-323bc05d9119)
-![isometric3](https://github.com/user-attachments/assets/b038ae4f-c140-4692-86cd-5e6b57acf730)
+https://github.com/user-attachments/assets/0db2be88-87f5-426b-b0e5-aca779bfac3f
+![demo1](https://github.com/user-attachments/assets/66fb2219-d74d-4632-bec4-ad71196c5298)
+![demo2](https://github.com/user-attachments/assets/cfa0223f-8883-40d8-9866-30e18d61697f)
 
 
 ## 🚀 Usage  
-- **Navigate the Map:** Use the camera controls to explore the isometric grid.
-- **Refresh the Grid:** Press **R** to regenerate the grid with a new layout.
 - Use **WASD** to move the camera and explore the grid.
+- **Refresh the Grid:** Press **R** to refresh the grid.
 
 ## 📦 Installation  
 
