@@ -47,3 +47,8 @@
 *.suo
 .vs/IsometricGrid-SFML/v17/DocumentLayout.backup.json
 .vs/IsometricGrid-SFML/v17/DocumentLayout.json
+
+code2text.py
+code2text_output.txt
+
+build

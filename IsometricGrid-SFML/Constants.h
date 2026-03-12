@@ -14,4 +14,7 @@ constexpr unsigned int GRID_LAYERS = 3;
 
 constexpr int CHUNK_SIZE = 32;
 
+constexpr unsigned int GRID_ROWS = 32;
+constexpr unsigned int GRID_COLS = 32;
+
 #endif
