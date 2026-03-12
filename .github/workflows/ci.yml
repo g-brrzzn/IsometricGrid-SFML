@@ -46,7 +46,7 @@ jobs:
             }
           }
 
-      - name: Install SFML (vcpkg x64-windows)
+      - name: Install SFML via vcpkg (Windows)  
         shell: pwsh
         run: |
           $env:VCPKG_ROOT = "${{ runner.temp }}\vcpkg"
@@ -54,7 +54,7 @@ jobs:
           $attempt = 0
           while ($true) {
             try {
-              & $vcpkg install sfml[graphics,window,system]:x64-windows
+              & $vcpkg install sfml:x64-windows
               break
             } catch {
               $attempt++
@@ -79,7 +79,6 @@ jobs:
           Remove-Item -Recurse -Force $out -ErrorAction SilentlyContinue
           New-Item -ItemType Directory -Path $out | Out-Null
           Copy-Item -Path "build\bin\Release\*" -Destination $out -Recurse -Force -ErrorAction SilentlyContinue
-          # if dlls are alongside build\bin, copy them as well
           if (Test-Path "build\bin") {
             Copy-Item -Path "build\bin\*" -Destination $out -Recurse -Force -ErrorAction SilentlyContinue
           }
@@ -114,10 +113,10 @@ jobs:
           cd "$VCPKG_ROOT"
           ./bootstrap-vcpkg.sh || (sleep 5 && ./bootstrap-vcpkg.sh) || (sleep 10 && ./bootstrap-vcpkg.sh)
 
-      - name: Install SFML (vcpkg x64-linux)
+      - name: Install SFML via vcpkg (Linux)  
         run: |
           export VCPKG_ROOT="${RUNNER_TEMP}/vcpkg"
-          "$VCPKG_ROOT/vcpkg" install sfml[graphics,window,system]:x64-linux
+          "$VCPKG_ROOT/vcpkg" install sfml:x64-linux
 
       - name: Configure CMake (Linux)
         run: |
@@ -164,10 +163,10 @@ jobs:
           cd "$VCPKG_ROOT"
           ./bootstrap-vcpkg.sh || (sleep 5 && ./bootstrap-vcpkg.sh) || (sleep 10 && ./bootstrap-vcpkg.sh)
 
-      - name: Install SFML (vcpkg x64-osx)
+      - name: Install SFML via vcpkg (macOS)
         run: |
           VCPKG_ROOT="${RUNNER_TEMP}/vcpkg"
-          "$VCPKG_ROOT/vcpkg" install sfml[graphics,window,system]:x64-osx
+          "$VCPKG_ROOT/vcpkg" install sfml:x64-osx
 
       - name: Configure CMake (macOS)
         run: |
